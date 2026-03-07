@@ -7,15 +7,12 @@
 
 html{
     scroll-behavior: smooth;
-    scroll-padding-top: 25px;
 }
 
 /* BANNER */
 
 #banner {
-    background:
-        linear-gradient(rgba(0, 0, 0, 0.55), rgba(0, 150, 136, 0.45)),
-        url(banner.jpg);
+    background: linear-gradient(rgba(0,0,0,0.65), rgba(0,150,136,0.75)), url(banner.jpg);
     background-size: cover;
     background-position: center;
     height: 100vh;
@@ -281,8 +278,8 @@ nav ul li a:hover {
 }
 
 .feature-item:hover{
-    transform: translateY(-6px);
-    box-shadow: 0 14px 30px rgba(0,150,136,0.15);
+transform: translateY(-8px);
+box-shadow:0 20px 50px rgba(0,0,0,0.15);
 }
 
 .features h1{
@@ -564,18 +561,20 @@ nav ul li a:hover {
 
 #footer{
     width: 100%;
-    padding: 100px 0 30px;
+    padding: 110px 0 40px;
     background: #efefef;
     position: relative;
     overflow: hidden;
 }
 
+/* container principal */
+
 .footer-row{
-    width: 76%;
-    max-width: 1150px;
+    width: 80%;
+    max-width: 1200px;
     margin: 0 auto;
     display: flex;
-    justify-content: center;
+    justify-content: space-between;
     align-items: stretch;
     flex-wrap: wrap;
     gap: 30px;
@@ -583,16 +582,17 @@ nav ul li a:hover {
     z-index: 2;
 }
 
+/* carduri program + contact */
+
 .footer-left,
 .footer-right{
     flex: 1 1 420px;
-    max-width: 500px;
-    padding: 28px 32px;
-    margin-bottom: 20px;
-    background: rgba(255,255,255,0.72);
-    border-radius: 18px;
-    box-shadow: 0 10px 25px rgba(0,0,0,0.06);
-    backdrop-filter: blur(4px);
+    max-width: 520px;
+    padding: 30px 34px;
+    background: rgba(255,255,255,0.75);
+    border-radius: 20px;
+    box-shadow: 0 12px 35px rgba(0,0,0,0.08);
+    backdrop-filter: blur(6px);
 }
 
 .footer-right{
@@ -600,17 +600,19 @@ nav ul li a:hover {
 }
 
 .footer-row h1{
-    margin-bottom: 18px;
-    font-size: 34px;
+    margin-bottom: 20px;
+    font-size: 32px;
 }
+
+/* text contact */
 
 .footer-row p{
     display: flex;
     align-items: center;
     justify-content: flex-start;
-    gap: 10px;
-    line-height: 34px;
-    font-size: 18px;
+    gap: 12px;
+    line-height: 32px;
+    font-size: 17px;
     color: #222;
     margin-bottom: 8px;
 }
@@ -629,6 +631,8 @@ nav ul li a:hover {
     color: #009688;
 }
 
+/* iconite */
+
 .footer-left .fa,
 .footer-right .fa{
     font-size: 18px;
@@ -636,26 +640,52 @@ nav ul li a:hover {
     flex-shrink: 0;
 }
 
+/* imagine decor */
+
 .footer-img{
     max-width: 370px;
-    opacity: 0.08;
+    opacity: 0.07;
     position: absolute;
     left: 50%;
-    top: 43%;
+    top: 42%;
     transform: translate(-50%, -50%);
     z-index: 1;
 }
 
-.footer-booking{
-    text-align: center;
-    margin-top: 25px;
+/* harta */
+
+.footer-map{
+    width: 80%;
+    max-width: 1200px;
+    margin: 30px auto 0;
+    border-radius: 20px;
+    overflow: hidden;
+    box-shadow: 0 15px 40px rgba(0,0,0,0.1);
     position: relative;
     z-index: 2;
 }
 
-.social-links{
+.footer-map iframe{
+    display: block;
+    width: 100%;
+    height: 280px;
+    border: 0;
+}
+
+/* buton programare */
+
+.footer-booking{
     text-align: center;
     margin-top: 35px;
+    position: relative;
+    z-index: 2;
+}
+
+/* social */
+
+.social-links{
+    text-align: center;
+    margin-top: 40px;
     position: relative;
     z-index: 2;
 }
@@ -665,29 +695,53 @@ nav ul li a:hover {
 }
 
 .social-links .fab{
-    height: 52px;
-    width: 52px;
+    height: 54px;
+    width: 54px;
     font-size: 24px;
-    line-height: 52px;
+    line-height: 54px;
     border: 1px solid #009688;
-    margin: 0 6px;
+    margin: 0 8px;
     color: #009688;
     cursor: pointer;
-    transition: .4s;
-    border-radius: 10px;
-    background: rgba(255,255,255,0.75);
+    transition: all .35s ease;
+    border-radius: 12px;
+    background: rgba(255,255,255,0.8);
 }
 
 .social-links .fab:hover{
     background: #009688;
     color: #fff;
-    transform: translateY(-6px);
+    transform: translateY(-6px) scale(1.05);
 }
 
 .social-links p{
     font-size: 14px;
-    margin-top: 22px;
+    margin-top: 24px;
     color: #444;
+}
+
+/* responsive */
+
+@media screen and (max-width:770px){
+
+.footer-row{
+    width:90%;
+}
+
+.footer-left,
+.footer-right{
+    max-width:100%;
+    text-align:left;
+}
+
+.footer-right p{
+    justify-content:flex-start;
+}
+
+.footer-map{
+    width:90%;
+}
+
 }
 
 /* BUTTONS */
