@@ -8,6 +8,9 @@
 html{
     scroll-behavior: smooth;
 }
+body{
+    overflow-x: hidden;
+}
 
 /* BANNER */
 
@@ -134,13 +137,8 @@ html{
     background-size: cover;
     background-position: center;
 
-    backdrop-filter: blur(6px);
-
     z-index: 1000;
     transition: 0.45s ease;
-
-    box-shadow: -15px 0 40px rgba(0,0,0,0.35);
-
     padding-top: 90px;
 }
 
